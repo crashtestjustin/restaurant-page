@@ -19,6 +19,29 @@ export function navBar() {
   header.appendChild(contactButton);
 }
 
-export function titleSection() {}
+export function titleSection() {
+  const titles = document.createElement("div");
+  titles.classList.add("title-section");
+  const header1 = document.createElement("h1");
+  const header2 = document.createElement("h2");
+  header1.textContent = "Justin's Burgers and Fries";
+  header2.textContent = "The Best Burgers in Town!";
 
-export function contentSection() {}
+  page.appendChild(titles);
+  titles.appendChild(header1);
+  titles.appendChild(header2);
+}
+
+export function contentSection() {
+  const content = document.createElement("div");
+  content.classList.add("content-section");
+  page.appendChild(content);
+}
+
+export function footerSection() {
+  const footer = document.createElement("footer");
+  const footerText = document.createElement("div");
+  footerText.textContent = "Created by Justin Elliott - 2023";
+  page.appendChild(footer);
+  footer.appendChild(footerText);
+}
