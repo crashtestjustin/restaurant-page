@@ -1,0 +1,56 @@
+:root {
+  --header-bg-color: #ff4d4d;
+  --body-bg-color: #5bd7d7;
+  --nav-button-color: #32cdcd;
+}
+
+body {
+  margin: 0;
+  font-family: "Sora", sans-serif;
+}
+
+#content {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 1fr 1fr 10fr 1fr;
+  justify-content: center;
+  background-color: var(--body-bg-color);
+}
+
+.restaurant-nav {
+  width: 100vw;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--header-bg-color);
+}
+
+.restaurant-nav button {
+  margin-top: auto;
+  width: 100px;
+  height: 60px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  cursor: pointer;
+  border: none;
+  font-size: 1.1rem;
+  text-shadow: 3px 3px 5px rgb(36, 143, 143);
+  color: #ffffff;
+  background-color: var(--nav-button-color);
+}
+
+.restaurant-nav .active-button {
+  border-bottom: none;
+  /* background-color: #ffffff; */
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+}
