@@ -40,8 +40,11 @@ export function contentSection() {
 
 export function footerSection() {
   const footer = document.createElement("footer");
+  const footerLink = document.createElement("a");
+  footerLink.href = "https://github.com/crashtestjustin";
   const footerText = document.createElement("div");
   footerText.textContent = "Created by Justin Elliott - 2023";
   page.appendChild(footer);
-  footer.appendChild(footerText);
+  footer.appendChild(footerLink);
+  footerLink.appendChild(footerText);
 }

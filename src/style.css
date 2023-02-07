@@ -1,7 +1,13 @@
 :root {
   --header-bg-color: #ff4d4d;
+  --content-text-color: #e60000;
   --body-bg-color: #5bd7d7;
-  --nav-button-color: #32cdcd;
+  --nav-button-color: #3dcfcf;
+}
+
+@font-face {
+  font-family: "diner-style";
+  src: url(./HamburgerHeavenNF.ttf);
 }
 
 body {
@@ -29,7 +35,7 @@ body {
 
 .restaurant-nav button {
   margin-top: auto;
-  width: 100px;
+  width: 120px;
   height: 60px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
@@ -42,17 +48,33 @@ body {
 }
 
 .restaurant-nav .active-button {
-  border-bottom: none;
-  /* background-color: #ffffff; */
+  background-color: var(--body-bg-color);
 }
 
 h1,
 h2 {
   text-align: center;
+  font-family: "diner-style";
+  font-size: 4rem;
+  color: var(--content-text-color);
+}
+
+h2 {
+  font-size: 3rem;
 }
 
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 600;
+}
+
+footer a {
+  color: var(--content-text-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
