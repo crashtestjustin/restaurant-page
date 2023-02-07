@@ -1,1 +1,1 @@
-console.log("hello my name is Justin");
+(()=>{"use strict";const t=document.getElementById("content");!function(){const e=document.createElement("div");e.classList.add("restaurant-nav");const n=document.createElement("button");n.classList.add("home"),n.textContent="Home";const c=document.createElement("button");c.classList.add("menu"),c.textContent="Menu";const d=document.createElement("button");d.classList.add("contact"),d.textContent="Contact Us",t.appendChild(e),e.appendChild(n),e.appendChild(c),e.appendChild(d)}()})();

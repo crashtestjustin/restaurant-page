@@ -1,5 +1,5 @@
-function name(name) {
-  console.log(`hello my name is ${name}`);
-}
+import { navBar } from "./main.js";
+import { titleSection } from "./main.js";
+import { contentSection } from "./main.js";
 
-name("Justin");
+navBar();
