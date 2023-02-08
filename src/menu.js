@@ -9,6 +9,7 @@ function menuContent() {
 
 function renderMenuPage() {
   const contentSection = document.querySelector(".content-section");
+  contentSection.textContent = "";
 
   contentSection.appendChild(menuContent());
 }

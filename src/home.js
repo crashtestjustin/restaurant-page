@@ -39,7 +39,7 @@ function createParagraph(text) {
 
 function renderHomePage() {
   const contentSection = document.querySelector(".content-section");
-
+  contentSection.textContent = "";
   contentSection.appendChild(homeContent());
 }
 

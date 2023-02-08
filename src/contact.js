@@ -9,6 +9,7 @@ function contactContent() {
 
 function renderContactPage() {
   const contentSection = document.querySelector(".content-section");
+  contentSection.textContent = "";
 
   contentSection.appendChild(contactContent());
 }

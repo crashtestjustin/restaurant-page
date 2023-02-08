@@ -1,4 +1,6 @@
 import renderHomePage from "./home.js";
+import renderMenuPage from "./menu.js";
+import renderContactPage from "./contact.js";
 
 function navBar() {
   const header = document.createElement("div");
@@ -9,6 +11,7 @@ function navBar() {
   homeButton.textContent = "Home";
   homeButton.addEventListener("click", (e) => {
     activePageButton(homeButton);
+    renderHomePage();
   });
 
   const menuButton = document.createElement("button");
@@ -16,6 +19,7 @@ function navBar() {
   menuButton.textContent = "Menu";
   menuButton.addEventListener("click", (e) => {
     activePageButton(menuButton);
+    renderMenuPage();
   });
 
   const contactButton = document.createElement("button");
@@ -23,6 +27,7 @@ function navBar() {
   contactButton.textContent = "Contact Us";
   contactButton.addEventListener("click", (e) => {
     activePageButton(contactButton);
+    renderContactPage();
   });
 
   header.appendChild(homeButton);
