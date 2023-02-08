@@ -7,7 +7,7 @@ function navBar() {
   header.classList.add("restaurant-nav");
 
   const homeButton = document.createElement("button");
-  homeButton.classList.add("nav-button");
+  homeButton.classList = "home nav-button";
   homeButton.textContent = "Home";
   homeButton.addEventListener("click", (e) => {
     activePageButton(homeButton);
@@ -89,6 +89,6 @@ export function renderPage() {
   page.appendChild(contentSection());
   page.appendChild(footerSection());
 
-  //   page.appendChild(renderHomePage());
+  activePageButton(document.querySelector(".home"));
   renderHomePage();
 }
