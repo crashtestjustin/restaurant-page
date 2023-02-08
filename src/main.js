@@ -3,15 +3,27 @@ import renderHomePage from "./home.js";
 function navBar() {
   const header = document.createElement("div");
   header.classList.add("restaurant-nav");
+
   const homeButton = document.createElement("button");
-  homeButton.classList.add("home");
+  homeButton.classList.add("nav-button");
   homeButton.textContent = "Home";
+  homeButton.addEventListener("click", (e) => {
+    activePageButton(homeButton);
+  });
+
   const menuButton = document.createElement("button");
-  menuButton.classList.add("menu");
+  menuButton.classList.add("nav-button");
   menuButton.textContent = "Menu";
+  menuButton.addEventListener("click", (e) => {
+    activePageButton(menuButton);
+  });
+
   const contactButton = document.createElement("button");
-  contactButton.classList.add("contact");
+  contactButton.classList.add("nav-button");
   contactButton.textContent = "Contact Us";
+  contactButton.addEventListener("click", (e) => {
+    activePageButton(contactButton);
+  });
 
   header.appendChild(homeButton);
   header.appendChild(menuButton);
@@ -54,6 +66,16 @@ function footerSection() {
   return footer;
 }
 
+function activePageButton(activeButton) {
+  const activeButtonCheck = document.querySelectorAll("button");
+  activeButtonCheck.forEach((button) => {
+    if (button != activeButton) {
+      button.classList.remove("active-button");
+    }
+  });
+  activeButton.classList.add("active-button");
+}
+
 export function renderPage() {
   const page = document.getElementById("content");
 
@@ -62,5 +84,6 @@ export function renderPage() {
   page.appendChild(contentSection());
   page.appendChild(footerSection());
 
-  page.appendChild(renderHomePage());
+  //   page.appendChild(renderHomePage());
+  renderHomePage();
 }
