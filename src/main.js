@@ -1,4 +1,4 @@
-const page = document.getElementById("content");
+import renderHomePage from "./home.js";
 
 function navBar() {
   const header = document.createElement("div");
@@ -25,7 +25,7 @@ function titleSection() {
   titles.classList.add("title-section");
   const header1 = document.createElement("h1");
   const header2 = document.createElement("h2");
-  header1.textContent = "Justin's Burgers and Fries";
+  header1.textContent = "CTJ's Burgers and Fries";
   header2.textContent = "The Best Burgers in Town!";
 
   titles.appendChild(header1);
@@ -61,4 +61,6 @@ export function renderPage() {
   page.appendChild(titleSection());
   page.appendChild(contentSection());
   page.appendChild(footerSection());
+
+  page.appendChild(renderHomePage());
 }
