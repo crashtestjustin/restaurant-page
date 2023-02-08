@@ -1,6 +1,6 @@
 const page = document.getElementById("content");
 
-export function navBar() {
+function navBar() {
   const header = document.createElement("div");
   header.classList.add("restaurant-nav");
   const homeButton = document.createElement("button");
@@ -13,13 +13,14 @@ export function navBar() {
   contactButton.classList.add("contact");
   contactButton.textContent = "Contact Us";
 
-  page.appendChild(header);
   header.appendChild(homeButton);
   header.appendChild(menuButton);
   header.appendChild(contactButton);
+
+  return header;
 }
 
-export function titleSection() {
+function titleSection() {
   const titles = document.createElement("div");
   titles.classList.add("title-section");
   const header1 = document.createElement("h1");
@@ -27,24 +28,37 @@ export function titleSection() {
   header1.textContent = "Justin's Burgers and Fries";
   header2.textContent = "The Best Burgers in Town!";
 
-  page.appendChild(titles);
   titles.appendChild(header1);
   titles.appendChild(header2);
+
+  return titles;
 }
 
-export function contentSection() {
+function contentSection() {
   const content = document.createElement("div");
   content.classList.add("content-section");
-  page.appendChild(content);
+
+  return content;
 }
 
-export function footerSection() {
+function footerSection() {
   const footer = document.createElement("footer");
   const footerLink = document.createElement("a");
   footerLink.href = "https://github.com/crashtestjustin";
   const footerText = document.createElement("div");
   footerText.textContent = "Created by Justin Elliott - 2023";
-  page.appendChild(footer);
+
   footer.appendChild(footerLink);
   footerLink.appendChild(footerText);
+
+  return footer;
+}
+
+export function renderPage() {
+  const page = document.getElementById("content");
+
+  page.appendChild(navBar());
+  page.appendChild(titleSection());
+  page.appendChild(contentSection());
+  page.appendChild(footerSection());
 }
