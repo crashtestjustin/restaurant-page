@@ -20,7 +20,7 @@ function homeContent() {
 
   const para2 = createParagraph("Come try our delicious old-time favourites!");
   para2.classList.add("body-text");
-  para2.classList.add("para-2");
+  para2.classList.add("home-para-2");
 
   homeSection.appendChild(dinerCarImg);
   homeSection.appendChild(para1);
