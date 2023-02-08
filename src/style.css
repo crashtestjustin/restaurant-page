@@ -3,6 +3,7 @@
   --content-text-color: #e60000;
   --body-bg-color: #5bd7d7;
   --nav-button-color: #3dcfcf;
+  --content-font: "diner-style";
 }
 
 @font-face {
@@ -13,6 +14,7 @@
 body {
   margin: 0;
   font-family: "Sora", sans-serif;
+  background-color: var(--body-bg-color);
 }
 
 #content {
@@ -54,13 +56,37 @@ body {
 h1,
 h2 {
   text-align: center;
-  font-family: "diner-style";
-  font-size: 4rem;
+  font-family: var(--content-font);
+  font-size: 3rem;
   color: var(--content-text-color);
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
+}
+
+.content-section {
+  margin-top: 30px;
+}
+
+.home-section {
+  display: grid;
+  grid-template: repeat(2, minmax(300px, 350px)) / repeat(
+      2,
+      minmax(500px, 510px)
+    );
+  grid-gap: 70px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin: 0 5%;
+}
+
+.body-text {
+  display: flex;
+  color: #e9e9e9;
+  font-family: var(--content-font);
+  font-size: 4rem;
 }
 
 footer {
@@ -77,4 +103,31 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 1150px) {
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .home-section {
+    grid-template: repeat(4, 1fr) / 1fr;
+    grid-gap: 0;
+    margin: 0 200px;
+  }
+
+  .body-text {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .para-2 {
+    grid-row: 4/5;
+  }
+
+  footer {
+    padding: 40px;
+  }
 }
