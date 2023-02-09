@@ -30,7 +30,7 @@ function homeContent() {
   return homeSection;
 }
 
-function createParagraph(text) {
+export function createParagraph(text) {
   const para = document.createElement("div");
   para.textContent = text;
 
