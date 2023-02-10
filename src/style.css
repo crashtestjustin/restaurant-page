@@ -83,6 +83,18 @@ h2 {
   justify-items: center;
   align-items: center;
   margin: 0 5%;
+  animation: fadeInAnimation ease 0.75s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .body-text {
@@ -94,6 +106,12 @@ h2 {
 
 /* menu tab styling */
 
+.menu-section {
+  animation: fadeInAnimation ease 0.75s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
 /* contact tab styling */
 .contact-section {
   display: grid;
@@ -101,6 +119,9 @@ h2 {
   justify-content: center;
   row-gap: 75px;
   margin: 30px 75px;
+  animation: fadeInAnimation ease 0.75s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .contact-header {
@@ -148,6 +169,7 @@ footer {
   justify-content: center;
   align-items: center;
   font-weight: 600;
+  padding: 40px;
 }
 
 footer a {
