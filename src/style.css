@@ -198,6 +198,7 @@ footer {
   align-items: center;
   font-weight: 600;
   padding: 40px;
+  color: var(--content-text-color);
 }
 
 footer a {
@@ -333,6 +334,7 @@ footer a:hover {
   footer {
     margin-top: auto;
     padding: 40px 0;
+    font-size: 0.8rem;
   }
 
   /* contact tab */
