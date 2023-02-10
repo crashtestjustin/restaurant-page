@@ -46,7 +46,7 @@ function emailAddress() {
   emailIcon.src = mailIcon;
   emailSection.appendChild(emailIcon);
 
-  const email = createParagraph("Email: contact@ctjsburgershop.com");
+  const email = createParagraph("contact@ctjsburgershop.com");
   email.classList.add("contact-email");
   emailSection.appendChild(email);
 
@@ -62,7 +62,7 @@ function phoneNumber() {
   phoneIcon1.src = phoneIcon;
   phoneSection.appendChild(phoneIcon1);
 
-  const phone = createParagraph("Phone: +1 999-999-9999");
+  const phone = createParagraph("+1 999-999-9999");
   phone.classList.add("contact-phone");
   phoneSection.appendChild(phone);
 
