@@ -60,13 +60,17 @@ function contentSection() {
 
 function footerSection() {
   const footer = document.createElement("footer");
-  const footerLink = document.createElement("a");
-  footerLink.href = "https://github.com/crashtestjustin";
-  const footerText = document.createElement("div");
-  footerText.textContent = "Created by Justin Elliott - 2023";
 
-  footer.appendChild(footerLink);
-  footerLink.appendChild(footerText);
+  const text1 = "- 2023";
+  const text2 =
+    "<a href='https://github.com/crashtestjustin'>Created by Justin Elliott</a>";
+  const finalString = `${text2} ${text1}`;
+
+  const footerChild = document.createElement("div");
+  footerChild.classList.add("footer-text");
+  footerChild.innerHTML = finalString;
+
+  footer.appendChild(footerChild);
 
   return footer;
 }
